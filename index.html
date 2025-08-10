@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form id="form">
+    <h2>Registration Form</h2>
+    
+    <input name="firstName" placeholder="First Name*" required>
+    <input name="lastName" placeholder="Last Name*" required>
+    <input name="fatherName" placeholder="Father's Name*" required>
+    <input name="motherName" placeholder="Mother's Name*" required>
+    <input type="date" name="dob" required>
+    
+    <div class="gender-group">
+      <label><input type="radio" name="gender" value="Male" required> Male</label>
+      <label><input type="radio" name="gender" value="Female"> Female</label>
+      <label><input type="radio" name="gender" value="Other"> Other</label>
+    </div>
+    
+    <textarea name="address" placeholder="Address*" required></textarea>
+    <input name="education10" placeholder="10th Details*" required>
+    <input name="education12" placeholder="12th Details*" required>
+    <input type="email" name="email" placeholder="Email*" required>
+    <input type="tel" name="contact" placeholder="Contact (10 digits)*" pattern="\d{10}" required>
+    
+    <label>Upload Photo:</label>
+    <input type="file" name="photo" accept="image/*" required>
+    
+    <label>Upload Signature:</label>
+    <input type="file" name="signature" accept="image/*" required>
+    
+    <div class="btn-group">
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+
+  <div id="res" style="display:none;">
+    <h3>Submitted Data</h3>
+    <pre id="out"></pre>
+    <img id="photo"><img id="sign">
+    <br>
+    <button onclick="newForm()">New</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
